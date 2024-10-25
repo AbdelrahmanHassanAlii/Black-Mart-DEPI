@@ -1,68 +1,52 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Colors */
+  --gray-color: rgb(240, 238, 237);
+  --gray-color-2: #333;
+  --gray-color-3: #aaa;
+  --white-color: rgb(255, 255, 255);
+  --photo-color: #f2f0f1;
+  --red-color-100: rgb(255, 51, 51);
+  --red-color-10: rgb(255, 51, 51, 0.1);
+  --red-color-hover: rgb(224, 117, 117);
+  --red-color-2: rgb(219, 68, 68);
+  --black-color-100: rgb(0, 0, 0);
+  --black-color-10: rgb(0, 0, 0, 0.1);
+  --black-color-40: rgb(0, 0, 0, 0.4);
+  --black-color-60: rgb(0, 0, 0, 0.6);
+  --yellow-color: rgb(255, 198, 51);
+  --yellow-color-10: rgb(255, 198, 51, 0.1);
+  --green-color-100: rgb(1, 171, 49);
+  --green-color-60: rgb(1, 171, 49, 0.6);
+  --blue-color: #299fff;
+  --blue-color-10: rgb(41, 159, 255, 0.1);
+  --blue-color-2: #008dda;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --light-blue-color: #e6f0ff;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Fonts */
+  --font-satoshi: "Satoshi", sans-serif;
+
+  /* container */
+  --container-width-lg: 80%;
+  --container-width-md: 85%;
+  --container-width-sm: 90%;
+  --container-margin: 0 auto;
+
+  /* box shadow */
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  --box-shadow-hover: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  /* transition */
+  --transition: all 0.3s ease;
+
+  /* border radius */
+  --border-radius: 0.5rem;
+  --border-radius-2: 0.25rem;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-satoshi);
 }
