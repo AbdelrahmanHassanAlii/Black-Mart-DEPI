@@ -50,3 +50,66 @@
   box-sizing: border-box;
   font-family: var(--font-satoshi);
 }
+
+a {
+  text-decoration: none;
+}
+
+.contentContainer {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+/* add-btn  */
+.add-btn {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-border-radius: var(--border-radius-2);
+  -moz-border-radius: var(--border-radius-2);
+  -ms-border-radius: var(--border-radius-2);
+  -o-border-radius: var(--border-radius-2);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  margin: 10px 0;
+
+  /* font-size: 1.5rem; */
+}
+
+.add-btn:hover {
+  background-color: var(--blue-color-2);
+}
+/* add-btn */
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  /* margin-bottom: 20px; */
+}

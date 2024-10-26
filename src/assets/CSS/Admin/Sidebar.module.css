@@ -1,0 +1,115 @@
+.SideBar {
+  background-color: var(--gray-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+  position: sticky;
+  top: 15px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  width: 90%;
+  margin: 15px auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  height: 95vh;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top .heading {
+  font-size: 1.3rem;
+  color: var(--gray-color-3);
+  font-weight: 600;
+}
+
+.top img {
+  width: 150px;
+}
+
+.top .name {
+  font-size: 1.1rem;
+  color: var(--gray-color-2);
+  font-weight: 600;
+}
+
+.middle ul {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 1rem;
+}
+
+.middle ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.middle ul li a,
+.middle ul li {
+  font-size: 1.2rem;
+  color: var(--gray-color-3);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.middle ul li:hover a,
+.middle ul li:hover {
+  color: var(--gray-color-2);
+}
+
+.bottom {
+  font-size: 1.2rem;
+  color: var(--gray-color-3);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.bottom button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  color: var(--gray-color-3);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.bottom:hover button,
+.bottom:hover {
+  color: var(--red-color-2);
+}
