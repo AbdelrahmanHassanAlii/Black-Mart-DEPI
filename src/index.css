@@ -116,6 +116,12 @@ a {
   /* margin-bottom: 20px; */
 }
 
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
 .toggleBtn {
   background-color: var(--blue-color);
   color: var(--white-color);

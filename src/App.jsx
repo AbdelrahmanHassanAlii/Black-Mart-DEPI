@@ -8,6 +8,7 @@ import { getRole } from "./Functions/getRole";
 import { useState } from "react";
 import AddCategoryForm from "./Components/Admin/AddCategoryForm";
 import UpdateCategoryForm from "./Components/Admin/UpdateCategoryForm";
+import SubCategoriesContainer from "./Components/Shared/Subcategories/SubCategoriesContainer";
 
 function App() {
   const AdminLayout = ({ children }) => {
@@ -56,7 +57,18 @@ function App() {
                 {/* admin categories Routes */}
                 <Route path="/categories" element={<CategoriesContainer />} />
                 <Route path="/categories/add" element={<AddCategoryForm />} />
-                <Route path="/categories/update/:id" element={<UpdateCategoryForm />} />
+                <Route
+                  path="/categories/update/:id"
+                  element={<UpdateCategoryForm />}
+                />
+
+                {/* admin subcategories Routes */}
+                <Route
+                  path="/subCategories"
+                  element={<SubCategoriesContainer />}
+                />
+                {/* <Route path="/subCategories/add" element={<AddCategoryForm />} /> */}
+                {/* <Route path="/subCategories/update/:id" element={<UpdateCategoryForm />} /> */}
               </Routes>
             </AdminLayout>
           }
