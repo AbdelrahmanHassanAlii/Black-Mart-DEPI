@@ -7,6 +7,7 @@ import SideBar from "./Components/Admin/SideBar";
 import { getRole } from "./Functions/getRole";
 import { useState } from "react";
 import AddCategoryForm from "./Components/Admin/AddCategoryForm";
+import UpdateCategoryForm from "./Components/Admin/UpdateCategoryForm";
 
 function App() {
   const AdminLayout = ({ children }) => {
@@ -55,6 +56,7 @@ function App() {
                 {/* admin categories Routes */}
                 <Route path="/categories" element={<CategoriesContainer />} />
                 <Route path="/categories/add" element={<AddCategoryForm />} />
+                <Route path="/categories/update/:id" element={<UpdateCategoryForm />} />
               </Routes>
             </AdminLayout>
           }

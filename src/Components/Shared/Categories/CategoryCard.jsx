@@ -65,7 +65,7 @@ export default function CategoryCard({ image, name, id }) {
           className={`${style.button} ${style.updateButton}`}
           onClick={handleUpdate}
         >
-          <Link to={`/admin/update-category/${id}`}>
+          <Link to={`/admin/categories/update/${id}`}>
             Update
             <GrUpdate />
           </Link>
