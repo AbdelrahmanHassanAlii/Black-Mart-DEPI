@@ -39,27 +39,34 @@ import Sign from "./Pages/Shared/Sign";
 import CategoriesContainer from "./Components/Shared/Categories/CategoriesContainer";
 import SideBar from "./Components/Admin/SideBar";
 import { getRole } from "./Functions/getRole";
+import { useState } from "react";
 
 function App() {
-
-
   const AdminLayout = ({ children }) => {
-    let role = getRole(); // Get role from local storage
+    let role = getRole();
+    const [isFullWidth, setIsFullWidth] = useState(false);
 
-    // Log role for debugging purposes
-    console.log("Role:", role);
+    // Toggle full width
+    const toggleFullWidth = () => setIsFullWidth(!isFullWidth);
 
-    // Show UnAuthorized component if the role is "user" or invalid
     return role === "user" ? (
       <div>UnAuthorized</div>
     ) : (
       <>
         <div
           className="admin-container"
-          style={{ display: "grid", gridTemplateColumns: "1fr 4fr" }}
+          style={{
+            display: "grid",
+            gridTemplateColumns: isFullWidth ? "1fr" : "1fr 4fr",
+          }}
         >
-          <SideBar />
-          <div className="admin-content">{children}</div>
+          {!isFullWidth && <SideBar />}
+          <div className="admin-content">
+            <button className="toggleBtn" onClick={toggleFullWidth}>
+              {isFullWidth ? "Show Sidebar" : "Hide Sidebar"}
+            </button>
+            {children}
+          </div>
         </div>
       </>
     );
@@ -77,13 +84,10 @@ function App() {
           element={
             <AdminLayout>
               <Routes>
-                <Route
-                  path="/dashboard"
-                  element={<CategoriesContainer />}
-                />
+                <Route path="/dashboard" element={<CategoriesContainer />} />
               </Routes>
             </AdminLayout>
-          } 
+          }
         />
       </Routes>
     </>

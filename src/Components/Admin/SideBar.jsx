@@ -11,8 +11,9 @@ import { RiCoupon3Fill } from "react-icons/ri";
 import style from "../../assets/CSS/Admin/Sidebar.module.css";
 import Swal from "sweetalert2";
 import { getName } from "./../../Functions/getName";
-import { deleteItemFromLS } from './../../Functions/deleteItemFromLS';
+import { deleteItemFromLS } from "./../../Functions/deleteItemFromLS";
 export default function SideBar() {
+
   const navigate = useNavigate();
   const handleLogout = () => {
     Swal.fire({

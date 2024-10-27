@@ -113,3 +113,26 @@ a {
   position: relative;
   /* margin-bottom: 20px; */
 }
+
+.toggleBtn {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: var(--transition);
+  -webkit-border-radius: var(--border-radius-2);
+  -moz-border-radius: var(--border-radius-2);
+  -ms-border-radius: var(--border-radius-2);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  position: sticky;
+  left: 10px;
+  top: 50%;
+  font-weight: bold;
+  z-index: 100;
+}

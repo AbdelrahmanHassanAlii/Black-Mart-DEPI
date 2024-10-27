@@ -9,10 +9,6 @@
   position: sticky;
   top: 15px;
   transition: var(--transition);
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
   width: 90%;
   margin: 15px auto;
   border-radius: 10px;
@@ -21,6 +17,14 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   height: 95vh;
+  @media screen and (max-width: 870px) {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 10;
+    width: 300px;
+    padding: 20px;
+  }
 }
 
 .top {
