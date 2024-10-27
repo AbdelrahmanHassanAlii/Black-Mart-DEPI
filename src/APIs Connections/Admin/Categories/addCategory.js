@@ -2,11 +2,12 @@ import axios from "axios";
 import { getToken } from "../../../Functions/getToken";
 import { Base_Url } from "../../baseUrl";
 
-export const deleteCategory = async (categoryID) => {
-  const url = `${Base_Url}/categories/${categoryID}`;
+export const addCategory = async (category) => {
+  const url = `${Base_Url}/categories`;
 
-  const response = await axios.delete(url, {
+  const response = await axios.post(url, category, {
     headers: {
+      "Content-Type": "multipart/form-data",
       token: `${getToken()}`,
     },
   });

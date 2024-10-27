@@ -81,6 +81,8 @@ a {
   color: var(--white-color);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-2);
+  border: none;
+
   cursor: pointer;
   transition: var(--transition);
   -webkit-border-radius: var(--border-radius-2);
@@ -130,9 +132,9 @@ a {
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
-  position: sticky;
+  position: fixed;
   left: 10px;
-  top: 50%;
+  top: 85%;
   font-weight: bold;
   z-index: 100;
 }

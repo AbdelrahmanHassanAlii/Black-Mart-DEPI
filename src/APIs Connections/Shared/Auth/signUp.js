@@ -1,7 +1,8 @@
 import axios from "axios";
+import { Base_Url } from "../../baseUrl";
 
 export const signup = async (user) => {
-  const url = "http://localhost:3000/api/v1/auth/signup";
+  const url = `${Base_Url}/auth/signup`;
 
   const response = await axios.post(url, user);
 
