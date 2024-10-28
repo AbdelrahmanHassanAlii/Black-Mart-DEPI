@@ -55,7 +55,7 @@ export default function SubCategoryCard({ subCategory }) {
           <div className={style.subCategoryBtns}>
             <Link
               className={style.editBtn}
-              to={`/admin/subCategories/edit/${subCategory._id}`}
+              to={`/admin/subCategories/update/${subCategory._id}`}
             >
               Update
               <RxUpdate />

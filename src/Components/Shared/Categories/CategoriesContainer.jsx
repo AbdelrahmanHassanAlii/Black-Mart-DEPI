@@ -14,14 +14,14 @@ export default function CategoriesContainer() {
         const categoriesData = await getAllCategories();
         setCategories(categoriesData);
 
-        console.log("Categories:", categoriesData);
+        // console.log("Categories:", categoriesData);
       } catch (error) {
         console.error("Error fetching categories:", error);
       }
     };
 
     getCategories();
-  }, []);
+  }, [categories]);
 
   return (
     <div className="contentContainer">
