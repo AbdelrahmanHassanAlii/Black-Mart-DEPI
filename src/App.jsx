@@ -11,6 +11,9 @@ import UpdateCategoryForm from "./Components/Admin/UpdateCategoryForm";
 import SubCategoriesContainer from "./Components/Shared/Subcategories/SubCategoriesContainer";
 import AddSubcategoryForm from "./Components/Admin/AddSubcategoryForm";
 import UpdateSubcategoryForm from "./Components/Admin/UpdateSubcategoryForm";
+import ProductsContainer from "./Components/Shared/Products/ProductsContainer";
+import AddProductForm from "./Components/Admin/AddProductForm";
+import UpdateProductForm from "./Components/Admin/UpdateProductForm";
 
 function App() {
   const AdminLayout = ({ children }) => {
@@ -78,6 +81,11 @@ function App() {
                   path="/subCategories/update/:id"
                   element={<UpdateSubcategoryForm />}
                 />
+
+                {/* admin product Routes */}
+                <Route path="/products" element={<ProductsContainer />} />
+                <Route path="/products/add" element={<AddProductForm />} />
+                <Route path="/products/update/:id" element={<UpdateProductForm />} />
               </Routes>
             </AdminLayout>
           }
