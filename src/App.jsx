@@ -19,6 +19,7 @@ import AddCouponForm from "./Components/Admin/AddCouponeForm";
 import UpdateCouponeForm from "./Components/Admin/UpdateCouponeForm";
 import OrdersTable from "./Components/Admin/OrdersTable";
 import OrderDetails from "./Components/Admin/OrderDetails";
+import UsersTable from "./Components/Admin/UsersTable";
 
 function App() {
   const AdminLayout = ({ children }) => {
@@ -106,6 +107,9 @@ function App() {
                 {/* admin orders routes */}
                 <Route path="/orders" element={<OrdersTable />} />
                 <Route path="/orders/:id" element={<OrderDetails />} />
+
+                {/* admin users routes */}
+                <Route path="/users" element={<UsersTable />} />
               </Routes>
             </AdminLayout>
           }
