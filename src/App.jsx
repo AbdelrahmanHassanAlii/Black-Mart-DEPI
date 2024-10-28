@@ -14,6 +14,9 @@ import UpdateSubcategoryForm from "./Components/Admin/UpdateSubcategoryForm";
 import ProductsContainer from "./Components/Shared/Products/ProductsContainer";
 import AddProductForm from "./Components/Admin/AddProductForm";
 import UpdateProductForm from "./Components/Admin/UpdateProductForm";
+import CouponsContainer from "./Components/Admin/CouponsContainer";
+import AddCouponForm from "./Components/Admin/AddCouponeForm";
+import UpdateCouponeForm from "./Components/Admin/UpdateCouponeForm";
 
 function App() {
   const AdminLayout = ({ children }) => {
@@ -85,7 +88,18 @@ function App() {
                 {/* admin product Routes */}
                 <Route path="/products" element={<ProductsContainer />} />
                 <Route path="/products/add" element={<AddProductForm />} />
-                <Route path="/products/update/:id" element={<UpdateProductForm />} />
+                <Route
+                  path="/products/update/:id"
+                  element={<UpdateProductForm />}
+                />
+
+                {/* admin coupon Routes */}
+                <Route path="/coupons" element={<CouponsContainer />} />
+                <Route path="/coupons/add" element={<AddCouponForm />} />
+                <Route
+                  path="/coupons/update/:id"
+                  element={<UpdateCouponeForm />}
+                />
               </Routes>
             </AdminLayout>
           }
