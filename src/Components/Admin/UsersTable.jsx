@@ -115,8 +115,8 @@ export default function UsersTable() {
     const getUsers = async () => {
       try {
         let userData = await getAllUsers();
-        console.log(userData.data.users);
-        setUsers(userData.data.users);
+        // console.log(userData);
+        setUsers(userData);
       } catch (error) {
         console.log(error);
       }

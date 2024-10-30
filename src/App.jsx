@@ -20,6 +20,7 @@ import UpdateCouponeForm from "./Components/Admin/UpdateCouponeForm";
 import OrdersTable from "./Components/Admin/OrdersTable";
 import OrderDetails from "./Components/Admin/OrderDetails";
 import UsersTable from "./Components/Admin/UsersTable";
+import Dashboard from "./Pages/Admin/Dashboard";
 
 function App() {
   const AdminLayout = ({ children }) => {
@@ -63,7 +64,7 @@ function App() {
           element={
             <AdminLayout>
               <Routes>
-                <Route path="/dashboard" element={<CategoriesContainer />} />
+                <Route path="/dashboard" element={<Dashboard />} />
 
                 {/* admin categories Routes */}
                 <Route path="/categories" element={<CategoriesContainer />} />
