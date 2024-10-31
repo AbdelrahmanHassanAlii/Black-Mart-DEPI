@@ -27,7 +27,7 @@ export default function SideBar() {
     }).then((result) => {
       if (result.isConfirmed) {
         deleteItemFromLS("loginData");
-        navigate("/login");
+        navigate("/");
       }
     });
   };
