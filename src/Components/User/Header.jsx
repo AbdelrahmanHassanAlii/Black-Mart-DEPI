@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import style from "../../assets/CSS/User/Header.module.css";
 import { getItemFromLS } from "../../Functions/getItemFromLS";
@@ -13,7 +12,7 @@ import { BiCategory } from "react-icons/bi";
 import { AiOutlineProduct } from "react-icons/ai";
 import { PiSignInBold } from "react-icons/pi";
 import { TbLogout2 } from "react-icons/tb";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { deleteItemFromLS } from "../../Functions/deleteItemFromLS";
 import Swal from "sweetalert2";
 import { addItemToLS } from "./../../Functions/addItemToLS";
@@ -27,7 +26,6 @@ export default function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    // console.log(isMenuOpen);
   };
 
   const logOut = () => {
@@ -53,6 +51,13 @@ export default function Header() {
     e.target.value === "" ? deleteItemFromLS("searchTerm") : null;
   };
 
+  useEffect(() => {
+    let term = getItemFromLS("searchTerm");
+    if (term.length > 0) {
+      setSearchTerm(term[0]);
+    }
+  }, []);
+
   return (
     <div className={style.header}>
       <div className="container">
@@ -77,6 +82,7 @@ export default function Header() {
               type="text"
               placeholder="Search for products"
               onChange={handleSearch}
+              value={searchTerm}
             />
           </div>
           {loginData.length !== 0 ? (

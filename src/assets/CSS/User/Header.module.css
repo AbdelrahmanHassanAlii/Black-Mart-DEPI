@@ -1,6 +1,6 @@
 .header {
   padding: 1rem;
-  background-color: var(--gray-color);
+  background-color: var(--white-color);
 }
 
 .headerContent {
@@ -54,7 +54,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--white-color);
+  background-color: var(--gray-color);
   width: 50%;
   padding: 0.5rem;
   border-radius: 10px;
@@ -72,6 +72,7 @@
   outline: none;
   width: 100%;
   caret-color: var(--gray-color-3);
+  background-color: transparent;
 }
 
 .searchArea input::placeholder {

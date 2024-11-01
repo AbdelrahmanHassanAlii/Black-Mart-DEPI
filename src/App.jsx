@@ -22,6 +22,7 @@ import OrderDetails from "./Components/Admin/OrderDetails";
 import UsersTable from "./Components/Admin/UsersTable";
 import Dashboard from "./Pages/Admin/Dashboard";
 import Home from "./Pages/User/Home";
+import Headers from "./Components/User/Headers";
 
 function App() {
   const AdminLayout = ({ children }) => {
@@ -56,7 +57,17 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/*"
+          element={
+            <>
+              <Headers />
+              <Routes>
+                <Route path="/" element={<Home />} />
+              </Routes>
+            </>
+          }
+        />
         <Route path="/sign" element={<Sign />} />
         <Route path="/login" element={<Sign />} />
 

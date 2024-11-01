@@ -1,0 +1,125 @@
+.landing {
+  padding: 0;
+  padding-top: 100px;
+  width: 100%;
+  background-color: var(--gray-color);
+  /* height: 100vh; */
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: fit-content;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.heading {
+  color: var(--gray-color-2);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.heading + p {
+  margin: 10px 0;
+  color: var(--gray-color-2);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.description {
+  color: var(--gray-color-3);
+  font-size: 15px;
+  margin: 10px 0;
+  @media screen and (min-width: 768px) {
+    width: 60%;
+  }
+}
+
+.button {
+  margin: 10px 0;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  width: fit-content;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+
+  &:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    background-color: var(--blue-color-2);
+  }
+}
+
+.images {
+  position: relative;
+}
+
+.star_1 {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 100px;
+  @media screen and (max-width: 768px) {
+    top: 3%;
+    right: 5%;
+  }
+}
+
+.image {
+  width: 100%;
+}
+
+.star_2 {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  width: 50px;
+}
+
+.achivements {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  gap: 30px;
+  width: fit-content;
+  @media screen and (max-width: 768px) {
+    gap: 15px;
+    justify-content: center;
+  }
+}
+
+.achivement {
+  .number {
+    color: var(--gray-color-2);
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .text {
+    color: var(--gray-color-3);
+    font-size: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 40%;
+  }
+}
