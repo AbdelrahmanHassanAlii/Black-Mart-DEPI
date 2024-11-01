@@ -1,7 +1,5 @@
 import style from "../../assets/CSS/User/Landing.module.css";
 import { Link } from "react-router-dom";
-import image from "../../assets/images/DesktopHome.png";
-import star from "../../assets/images/star.png";
 import { getItemFromLS } from "../../Functions/getItemFromLS";
 export default function Landing() {
   const loginData = getItemFromLS("loginData");
@@ -39,9 +37,21 @@ export default function Landing() {
             </div>
           </div>
           <div className={style.images}>
-            <img src={star} className={style.star_1} alt="landing image" />
-            <img src={image} className={style.image} alt="landing image" />
-            <img src={star} className={style.star_2} alt="landing image" />
+            <img
+              src="https://i.imgur.com/6zUKGR1.png"
+              className={style.star_1}
+              alt="landing image"
+            />
+            <img
+              src="https://i.imgur.com/Bd8y50V.png"
+              className={style.image}
+              alt="landing image"
+            />
+            <img
+              src="https://i.imgur.com/6zUKGR1.png"
+              className={style.star_2}
+              alt="landing image"
+            />
           </div>
         </div>
       </div>
