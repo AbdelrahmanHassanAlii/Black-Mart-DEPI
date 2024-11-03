@@ -8,10 +8,10 @@
   -o-border-radius: 10px;
   overflow: hidden;
   transition: var(--transition);
-  -webkit-transition: var();
-  -moz-transition: var();
-  -ms-transition: var();
-  -o-transition: var();
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
 
 .ProductCard:hover {
