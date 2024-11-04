@@ -7,6 +7,7 @@ import { getNewArrivals } from "../../Functions/getNewArrivals";
 import ProductsContainer from "../../Components/User/ProductsContainer";
 import { getBestSeller } from "../../Functions/getBestSeller";
 import { getItemFromLS } from "../../Functions/getItemFromLS";
+import { searchByName } from "../../Functions/SearchByName";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -67,7 +68,7 @@ export default function Home() {
       <Landing />
       {
         searchTerm && (
-          <ProductsContainer title={`Search Results for "${searchTerm}"`} products={products} />
+          <ProductsContainer title={`Search Results for "${searchTerm}"`} products={searchByName(products, searchTerm)} />
         )
       }
       <ProductsContainer title="Big Deals" products={bigDeals} />

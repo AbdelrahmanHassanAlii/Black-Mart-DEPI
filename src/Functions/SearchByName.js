@@ -1,5 +1,5 @@
 export const searchByName = (products, name) => {
-  const searchTerm = name.trim().toLowerCase();
+  const searchTerm = typeof name === "string" ? name.trim().toLowerCase() : "";
 
   if (!searchTerm) {
     return products;

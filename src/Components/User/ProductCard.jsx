@@ -19,7 +19,7 @@ export default function ProductCard({ product }) {
   return (
     <Link
       to={`/products/${product._id}`}
-      className={`${style.productCard} ${
+      className={`${style.Card} ${
         isUnavailable ? style.unavailable : ""
       }`}
       data-aos="fade-up"

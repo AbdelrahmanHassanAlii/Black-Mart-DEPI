@@ -23,6 +23,7 @@ import UsersTable from "./Components/Admin/UsersTable";
 import Dashboard from "./Pages/Admin/Dashboard";
 import Home from "./Pages/User/Home";
 import Headers from "./Components/User/Headers";
+import CategoriesContainerUser from "./Components/User/CategoriesContainerUser";
 
 function App() {
   const AdminLayout = ({ children }) => {
@@ -64,6 +65,7 @@ function App() {
               <Headers />
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/categories" element={<CategoriesContainerUser />} />
               </Routes>
             </>
           }

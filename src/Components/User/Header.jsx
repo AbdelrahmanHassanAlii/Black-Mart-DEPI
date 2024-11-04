@@ -66,7 +66,7 @@ export default function Header() {
           <div className={style.links}>
             <ul>
               <li>
-                <Link to="#">Categories</Link>
+                <Link to="/categories">Categories</Link>
               </li>
               <li>
                 <Link to="#">Subcategories</Link>
