@@ -4,10 +4,11 @@ import Landing from "../../Components/User/Landing";
 import { getAllProducts } from "../../APIs Connections/Shared/Products/getAllProducts";
 import { getBigDeals } from "../../Functions/getBigDeals";
 import { getNewArrivals } from "../../Functions/getNewArrivals";
-import ProductsContainer from "../../Components/User/ProductsContainer";
+import ProductsContainer from "../../Components/User/ProductsContainerUser";
 import { getBestSeller } from "../../Functions/getBestSeller";
 import { getItemFromLS } from "../../Functions/getItemFromLS";
 import { searchByName } from "../../Functions/SearchByName";
+import ProductsContainerUser from "../../Components/User/ProductsContainerUser";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -66,14 +67,15 @@ export default function Home() {
   return (
     <>
       <Landing />
-      {
-        searchTerm && (
-          <ProductsContainer title={`Search Results for "${searchTerm}"`} products={searchByName(products, searchTerm)} />
-        )
-      }
-      <ProductsContainer title="Big Deals" products={bigDeals} />
-      <ProductsContainer title="New Arrivals" products={newArrivals} />
-      <ProductsContainer title="Best Sellers" products={bestSellers} />
+      {searchTerm && (
+        <ProductsContainer
+          title={`Search Results for "${searchTerm}"`}
+          products={searchByName(products, searchTerm)}
+        />
+      )}
+      <ProductsContainerUser title="Big Deals" products={bigDeals} />
+      <ProductsContainerUser title="New Arrivals" products={newArrivals} />
+      <ProductsContainerUser title="Best Sellers" products={bestSellers} />
     </>
   );
 }

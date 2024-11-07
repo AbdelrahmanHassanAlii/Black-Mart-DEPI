@@ -24,6 +24,9 @@ import Dashboard from "./Pages/Admin/Dashboard";
 import Home from "./Pages/User/Home";
 import Headers from "./Components/User/Headers";
 import CategoriesContainerUser from "./Components/User/CategoriesContainerUser";
+import SubcategoriesContainerUser from "./Components/User/SubcategoriesContainerUser";
+import Products from "./Pages/User/Products";
+import SpecificSubcategories from "./Components/User/SpecificSubcategories";
 
 function App() {
   const AdminLayout = ({ children }) => {
@@ -65,7 +68,22 @@ function App() {
               <Headers />
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/categories" element={<CategoriesContainerUser />} />
+                <Route
+                  path="/categories"
+                  element={<CategoriesContainerUser />}
+                />
+                <Route
+                  path="/subcategories"
+                  element={<SubcategoriesContainerUser />}
+                />
+                <Route
+                  path="/category/:categoryID/subcategories"
+                  element={<SpecificSubcategories />}
+                />
+                <Route
+                  path="/products"
+                  element={<Products />}
+                />
               </Routes>
             </>
           }

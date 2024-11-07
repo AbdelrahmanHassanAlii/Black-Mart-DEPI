@@ -69,10 +69,10 @@ export default function Header() {
                 <Link to="/categories">Categories</Link>
               </li>
               <li>
-                <Link to="#">Subcategories</Link>
+                <Link to="/subcategories">Subcategories</Link>
               </li>
               <li>
-                <Link to="#">Products</Link>
+                <Link to="/products">Products</Link>
               </li>
             </ul>
           </div>
@@ -80,7 +80,7 @@ export default function Header() {
             <FaSearch className={style.searchIcon} />
             <input
               type="text"
-              placeholder="Search for products"
+              placeholder="Search for products, subcategories and categories"
               onChange={handleSearch}
               value={searchTerm}
             />

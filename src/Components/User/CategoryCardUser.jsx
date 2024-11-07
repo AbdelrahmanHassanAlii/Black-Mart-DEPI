@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import style from "../../assets/CSS/User/ProductCard.module.css";
 export default function CategoryCardUser({ category }) {
   return (
-    <Link to={`/category/${category._id}`} className={style.Card}>
+    <Link to={`/category/${category._id}/subcategories`} className={style.Card}>
       <div className={style.image}>
         <img src={category.img} alt={category.name} />
       </div>

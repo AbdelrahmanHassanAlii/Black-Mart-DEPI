@@ -2,7 +2,7 @@
 import Heading from "./Heading";
 import ProductCard from "./ProductCard";
 
-export default function ProductsContainer({ title, products }) {
+export default function ProductsContainerUser({ title, products }) {
   return (
     <div style={{ margin: "50px 0" }}>
       <div className="container">
