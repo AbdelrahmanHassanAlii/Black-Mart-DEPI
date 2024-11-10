@@ -28,6 +28,7 @@ import SubcategoriesContainerUser from "./Components/User/SubcategoriesContainer
 import Products from "./Pages/User/Products";
 import SpecificSubcategories from "./Components/User/SpecificSubcategories";
 import SpecificProducts from "./Components/User/SpecificProducts";
+import ProductDetails from "./Components/User/ProductDetails";
 
 function App() {
   const AdminLayout = ({ children }) => {
@@ -88,6 +89,8 @@ function App() {
                   path="/subcategories/:subcategoryID/products"
                   element={<SpecificProducts />}
                 />
+
+                <Route path="/products/:id" element={<ProductDetails />} />
               </Routes>
             </>
           }
