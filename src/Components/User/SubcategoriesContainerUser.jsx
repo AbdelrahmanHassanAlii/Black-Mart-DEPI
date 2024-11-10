@@ -51,7 +51,7 @@ export default function SubcategoriesContainerUser() {
           <div className="cardsContainer" style={{ marginBottom: "50px" }}>
             {filteredSubategories.length > 0 ? (
               filteredSubategories.map((sub) => (
-                <CategoryCardUser key={sub._id} category={sub} />
+                <CategoryCardUser key={sub._id} category={sub} path={`/subcategories/${sub._id}/products`} />
               ))
             ) : (
               <p>No subcategories found.</p>

@@ -25,7 +25,11 @@ export default function SpecificSubcategories() {
       <div className="cardsContainer" style={{ padding: "100px 0" }}>
         {subcategories.length > 0 ? (
           subcategories.map((subcategory) => (
-            <CategoryCardUser key={subcategory._id} category={subcategory} />
+            <CategoryCardUser
+              key={subcategory._id}
+              category={subcategory}
+              path={`/subcategories/${subcategory._id}/products`}
+            />
           ))
         ) : (
           <p>No subcategories found for this category</p>
